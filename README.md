@@ -63,7 +63,7 @@ In any extra time:
  - Engineer additional features to improve R<sup>2</sup> (without violating assumptions), either with the existing datasets or by acquiring additional datasets.
  - Address additional claims from the subject-matter experts (without violating assumptions).
  - Utilize additional statistical techniques other than linear regression to address research questions related to the claims investigated.
- - Make use of bootstrapping to generate confidence intervals for your regression parameters and then compare with them with the intervals that statsmodels generates.
+ - Make use of bootstrapping to generate confidence intervals for your regression parameters and then compare them with the intervals that statsmodels generates.
 
 ## DELIVERABLES
 
