@@ -7,7 +7,7 @@ Another module down--you're almost halfway there!
 
 This will be your first of several modeling projects.  
 
-<u>For this project, your goal is to build a model that provides inferential insights into real-world housing data.</u>
+<ins>For this project, your goal is to build a model that provides inferential insights into real-world housing data.</ins>
 
 ## BACKGROUND
 
