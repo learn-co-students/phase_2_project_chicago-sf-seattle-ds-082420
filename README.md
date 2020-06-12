@@ -32,7 +32,7 @@ Three of the claims would require you to seek out additional datasets:
 8. Lower speed limits increase home sale price<sup>6</sup>
 9. Having an accessory dwelling unit (ADU) increases home sale price<sup>6, 8</sup>
 
- <u><b>Your task is to build a linear regression model to represent sales prices in King County, and use it to address some of these claims.</b></u>
+ <ins><b>Your task is to build a linear regression model to represent sales prices in King County, and use it to address some of these claims.</b></ins>
 
 ## THE DATASET
 
