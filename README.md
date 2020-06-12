@@ -5,7 +5,9 @@ Another module down--you're almost halfway there!
 
 ![awesome gif](halfway-there.gif)
 
-This will be your first of several modeling projects.  In this case, your goal is to build a model that provides inferential insights into real-world housing data.
+This will be your first of several modeling projects.  
+
+<u>For this project, your goal is to build a model that provides inferential insights into real-world housing data.</u>
 
 ## BACKGROUND
 
@@ -30,15 +32,15 @@ Three of the claims would require you to seek out additional datasets:
 8. Lower speed limits increase home sale price<sup>6</sup>
 9. Having an accessory dwelling unit (ADU) increases home sale price<sup>6, 8</sup>
 
-Your task is to build a linear regression model to represent sales prices in King County, and use it to address some of these claims.
+ <u><b>Your task is to build a linear regression model to represent sales prices in King County, and use it to address some of these claims.</b></u>
 
 ## THE DATASET
 
 For this project, you'll be working with the King County House Sales dataset. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions relating to what the data means.
 
-The data itself (CSV files) and descriptions of the data (DOC files) can be downloaded [here](https://info.kingcounty.gov/assessor/DataDownload/default.aspx). Additional information about the MAJOR and MINOR attributes can be found [here](https://www5.kingcounty.gov/sdc/Metadata.aspx?Layer=parcel#AttributeInfo).
+The data itself (CSV files) and descriptions of the data (DOC files) can be downloaded [here](https://info.kingcounty.gov/assessor/DataDownload/default.aspx). Additional information about the `MAJOR` and `MINOR` attributes can be found [here](https://www5.kingcounty.gov/sdc/Metadata.aspx?Layer=parcel#AttributeInfo).
 
-The particular tables required for this analysis are:
+<u>The particular tables required for this analysis are:</u>
 
  - Real Property Sales
  - Residential Building
@@ -48,10 +50,11 @@ There is also a table called "Lookup" that explains the meaning of many of the a
 
 ## PROJECT REQUIREMENTS
 
-At minimum, your team of data scientists should:
+**At minimum, your team of data scientists should:**
 
  - Build a linear regression model with a target variable of home sale price, which is statistically valid such that any interpretation of coefficients are valid
-    - Do your best to have features meet the assumptions of a linear regression (no multicollinearity, linear with respect to the outcome variable, errors are normally distributed, etc.). Note: This is difficult! We will be looking most of all for _improvement_ on this score. In order to demonstrate improvement, you should create a (not very good) model that will serve as a kind of _baseline_. Then you can compare future regression models that you build with that baseline.
+    - Do your best to have features meet the assumptions of a linear regression (no multicollinearity, linear with respect to the outcome variable, errors are normally distributed, etc.). 
+      - Note: This is difficult! We will be looking most of all for _improvement_ on this score. In order to demonstrate improvement, you should create a (not very good) model that will serve as a kind of _baseline_. Then you can compare future regression models that you build with that baseline.
     - Try to maximize R<sup>2</sup> _without breaking any assumptions_
  - Address at least 3 of the 9 claims about housing prices made by subject-matter experts
     - Report the effect size as well as the statistical significance
@@ -82,7 +85,7 @@ In any extra time:
 5. A standalone `references/` directory that stores all relevant literature, data dictionaries, or useful references that were used to help you during the project.
     - Use this directory to store physical copies of the `.pdf` files; or
     - Create a `README.md` file that cites external resources that were used.
-6. A standalone `reports/` directory that stores your `memo.md` and `presentation.pdf` files
+6. A standalone `reports/` directory that stores your `presentation.pdf` file
 7. A standalone `notebooks/` directory that stores both your exploratory and report notebooks
     - A record of your workflow should be stored in `notebooks/exploratory`. Don't be afraid to leave in error messages, so you know what didn't work!
 8. A user-focused `README.md` file that briefly covers your process, methodology and findings.
@@ -95,12 +98,7 @@ In any extra time:
     - Custom functions and classes are imported from Python modules and are not created directly in the notebook. As soon as you have a working function in one of your exploratory notebooks, copy it over to `src` so it is reusable.
     - At least 4 meaningful data visualizations, with corresponding interpretations. All visualizations are well labeled with axes labels, a title, and a legend (when appropriate)
     - Take the time to make sure that you craft your story well, and clearly explain your process and findings in a way that clearly shows both your technical expertise and your ability to communicate your results!
-10. A one-page memo stored in `reports/memo.md` written exclusively for a non-technical stakeholder.
-    - This memo should describe:
-       - A summary of the business problem you are trying to solve
-       - Key takeaways from your solution
-       - A section on next steps if you had more time (i.e. one additional week)
-11. An "Executive Summary" Keynote/PowerPoint/Google Slide presentation (delivered as a PDF export) that explains what you have found.
+10. An "Executive Summary" Keynote/PowerPoint/Google Slide presentation (delivered as a PDF export) that explains what you have found.
     - Make sure to also add and commit this file as presentation.pdf of your non-technical presentation to your repository with a file name of `reports/presentation.pdf`.
     - Contain between 5-10 professional quality slides detailing:
        - A high-level overview of your methodology
@@ -153,6 +151,8 @@ The modeling phase in this project should be a brief stop-over as you are jumpin
 ### 5. Evaluation
 
 Your goal here is not to build just one model; it is to build many models and then choose the best one. In this case (which is different from future machine learning models), your goal is to gain additional insight into the housing sales data from 2019 in King County, as opposed to building a generalizable model that can make predictions about unseen data.
+
+**In other words, you are not trying to build a tool to compete with the Zillow Zestimate to predict home values.**
 
 Because of this framing, a higher R<sup>2</sup> is ideal, but you should not focus on attaining a higher R<sup>2</sup> so long as you have gross violations of the assumptions of a linear regression. These assumptions should be your focus both when selecting features and when assessing the quality of your model. Even with a relatively low R<sup>2</sup>, coefficients and p-values will be valid and meaningful if there are no violations of the assumptions.
 
