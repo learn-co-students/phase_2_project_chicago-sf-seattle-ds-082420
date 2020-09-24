@@ -50,7 +50,7 @@ There is also a table called "Lookup" that explains the meaning of many of the a
 
 **A git tip**: You probably won't want to have git track your data files (.csv, .zip). A quick and easy way of making sure they don't get tangled up in git is to add the lines `*.csv` and `*.zip` to your .gitignore file. (The '\*' indicates a wildcard, and so *any and all* .csv and .zip files will be ignored by git.)
 
-**Adding bash instructions for data download**: For every file you want to download, write in Bash in a Jupyter Notebook (assuming the notebook is in notebooks/exploratory and you want the data to go to data/raw
+**Adding bash instructions for data download**: For every file you want to download, write in Bash in a Jupyter Notebook (assuming the notebook is in notebooks/exploratory and you want the data to go to data/raw):
 
 ```! wget -P ../../data/raw <URL of zip file>```
 
