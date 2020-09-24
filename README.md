@@ -57,7 +57,7 @@ There is also a table called "Lookup" that explains the meaning of many of the a
 ```! unzip ../../data/raw/<name of zip file>```
 
 Then you can open it in Python like:
-df = pd.read_csv("../../data/raw/<name of .csv from inside zip file>")
+```df = pd.read_csv("../../data/raw/<name of .csv from inside zip file>")```
 (You’ll need to look in the directory to see what the .csv file is called)
 Those directions will likely need to be rewritten slightly for a Windows computer, to make sure it’s using a compatible HTTP utility (wget or something else) as well as Windows file paths.  It’s fine to include both cells in your notebook, with instructions on which one to run based on OS.
 
