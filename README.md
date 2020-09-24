@@ -1,7 +1,7 @@
 
-# Module 2 Final Project
+# Phase 2 Final Project
 
-Another module down--you're almost halfway there!
+Another phase complete--you're almost halfway there!
 
 ![awesome gif](halfway-there.gif)
 
@@ -74,7 +74,7 @@ In any extra time:
 
 1. A public GitHub repository.
 2. An `environment.yml` file that contains all the necessary packages needed to recreate your `linreg-env` conda environment.
-    - Unlike Mod 1, we haven't not given you an `environment.yml` file. Be sure to refer [to the documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to learn how to create and export the `linreg-env` conda environment.
+    - Unlike Phase 1, we haven't not given you an `environment.yml` file. Be sure to refer [to the documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to learn how to create and export the `linreg-env` conda environment.
 3. A standalone `src/` directory that stores all relevant source code.
     - All functions have docstrings that act as [professional-quality documentation](http://google.github.io/styleguide/pyguide.html#381-docstrings). 
     - If applicable, [well documented](https://www.sqlstyle.guide/) SQL queries with appropriate single-line or multiline comments.
@@ -160,7 +160,7 @@ Because of this framing, a higher R<sup>2</sup> is ideal, but you should not foc
 
 This framing has some implications for your process. For example, you do not want to perform a train-test split or have some other form of hold-out data; you want all of your data to go into getting the best possible coefficients. There is also no single number you can reference to demonstrate that you have the best possible model; in this way causal inference is more of an art, whereas machine learning is more of a science. You can use as many features as you want, but every step of the way you need to check the assumptions, not just check whether R<sup>2</sup> has improved. Because R<sup>2</sup> can only go up when you add more features, you may want to consult the adjusted R<sup>2</sup> metric as well.
 
-Your first cycle through these steps should result in some kind of "baseline" model.  Once you have that model, create a mini "report" that describes the model performance (in terms of R<sup>2</sup> or adjusted R<sup>2</sup>) as well as checks for the assumptions of linear regression.  The Learn labs [Assumptions for Linear Regression](https://learn.co/tracks/module-2-data-science-career-2-1/statistics-ab-testing-and-linear-regression/section-18-introduction-to-linear-regression/assumptions-for-linear-regression), [Ordinary Least Squares in Statsmodels (OLS)](https://learn.co/tracks/module-2-data-science-career-2-1/statistics-ab-testing-and-linear-regression/section-18-introduction-to-linear-regression/ordinary-least-squares-in-statsmodels-ols), and [Regression Diagnostics in Statsmodels](https://learn.co/tracks/module-2-data-science-career-2-1/statistics-ab-testing-and-linear-regression/section-18-introduction-to-linear-regression/regression-diagnostics-in-statsmodels) are a good starting point for this, but you are also free to use external resources, e.g. looking through the statistics available in the [Statsmodels `stats` submodule](https://www.statsmodels.org/stable/stats.html).
+Your first cycle through these steps should result in some kind of "baseline" model.  Once you have that model, create a mini "report" that describes the model performance (in terms of R<sup>2</sup> or adjusted R<sup>2</sup>) as well as checks for the assumptions of linear regression.  The Canvas labs [Assumptions for Linear Regression](https://learning.flatironschool.com/courses/603/pages/assumptions-for-linear-regression?module_item_id=39843), [Ordinary Least Squares in Statsmodels (OLS)](https://learning.flatironschool.com/courses/603/assignments/18124?module_item_id=39847), and [Regression Diagnostics in Statsmodels](https://learning.flatironschool.com/courses/603/assignments/18172?module_item_id=39857) are a good starting point for this, but you are also free to use external resources, e.g. looking through the statistics available in the [Statsmodels `stats` submodule](https://www.statsmodels.org/stable/stats.html).
 
 As you build each new model, perform these checks repeatedly to see whether the new models are better than the baseline.  You will almost certainly want to build functions to perform these checks once you get into a rhythm of tweaking the model slightly, evaluating the result, rinse, repeat.
 
