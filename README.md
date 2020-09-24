@@ -53,6 +53,7 @@ There is also a table called "Lookup" that explains the meaning of many of the a
 **Adding bash instructions for data download**: For every file you want to download, write in Bash in a Jupyter Notebook (assuming the notebook is in notebooks/exploratory and you want the data to go to data/raw
 
 ```! wget -P ../../data/raw <URL of zip file>```
+
 ```! unzip ../../data/raw/<name of zip file>```
 
 Then you can open it in Python like:
