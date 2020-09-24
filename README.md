@@ -48,7 +48,19 @@ The data itself (CSV files) and descriptions of the data (DOC files) can be down
 
 There is also a table called "Lookup" that explains the meaning of many of the attributes in the above tables (e.g. the `Street Surface` attribute of a parcel is a number with lookup code 60, which indicates that `1` means `PAVED`, `2` means `GRAVEL`, `3` means `DIRT`, and `4` means `UNDEVELOPED`).
 
-A git tip: You probably won't want to have git track your data files (.csv, .zip). A quick and easy way of making sure they don't get tangled up in git is to add the lines `*.csv` and `*.zip` to your .gitignore file. (The '\*' indicates a wildcard, and so *any and all* .csv and .zip files will be ignored by git.)
+**A git tip**: You probably won't want to have git track your data files (.csv, .zip). A quick and easy way of making sure they don't get tangled up in git is to add the lines `*.csv` and `*.zip` to your .gitignore file. (The '\*' indicates a wildcard, and so *any and all* .csv and .zip files will be ignored by git.)
+
+**Adding bash instructions for data download**: For every file you want to download, write in Bash in a Jupyter Notebook (assuming the notebook is in notebooks/exploratory and you want the data to go to data/raw
+
+```! wget -P ../../data/raw <URL of zip file>```
+```! unzip ../../data/raw/<name of zip file>```
+
+Then you can open it in Python like:
+df = pd.read_csv("../../data/raw/<name of .csv from inside zip file>")
+(You’ll need to look in the directory to see what the .csv file is called)
+Those directions will likely need to be rewritten slightly for a Windows computer, to make sure it’s using a compatible HTTP utility (wget or something else) as well as Windows file paths.  It’s fine to include both cells in your notebook, with instructions on which one to run based on OS.
+
+You can also set up a SQL DB, but we recommend getting these steps working and documented first.
 
 ## PROJECT REQUIREMENTS
 
