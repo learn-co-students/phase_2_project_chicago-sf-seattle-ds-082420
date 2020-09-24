@@ -48,6 +48,8 @@ The data itself (CSV files) and descriptions of the data (DOC files) can be down
 
 There is also a table called "Lookup" that explains the meaning of many of the attributes in the above tables (e.g. the `Street Surface` attribute of a parcel is a number with lookup code 60, which indicates that `1` means `PAVED`, `2` means `GRAVEL`, `3` means `DIRT`, and `4` means `UNDEVELOPED`).
 
+A git tip: You probably won't want to have git track your data files (.csv, .zip). A quick and easy way of making sure they don't get tangled up in git is to add the lines `*.csv` and `*.zip` to your .gitignore file. (The '\*' indicates a wildcard, and so *any and all* .csv and .zip files will be ignored by git.)
+
 ## PROJECT REQUIREMENTS
 
 **At minimum, your team of data scientists should:**
