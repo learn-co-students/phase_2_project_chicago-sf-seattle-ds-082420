@@ -1,0 +1,1 @@
+This folder contains Jupiter notebooks for exploring the data and experimenting with different combinations of predictors for modeling.

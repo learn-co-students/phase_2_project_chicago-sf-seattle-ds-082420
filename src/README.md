@@ -1,0 +1,1 @@
+This folder contains all source code functions stored as .py files. Also contained are the Jupiter notebooks used for building and testing these functions.

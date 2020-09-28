@@ -1,0 +1,1 @@
+This folder stores all raw data files downloaded during project setup.
