@@ -4,6 +4,53 @@ import pandas as pd
 import requests
 import pandas as pd
 
+def get_tables(dictionary):
+    
+    """
+    Takes a dictionary of tables, dictionary
+    returns 2 tables, ordinaltable and category table
+    ordinaltable is a table of just the ordinal columns from all sales, parcels and residential buildings
+    categorytable is the table of categorical variables from the same.
+    ordinal table will be return[0], categorical will be return[1]
+    
+    """
+    
+    sales = dictionary['rp_sale']
+    parcels = dictionary['res_bldg']
+    residences = dictionary['parcel']
+
+    sales = sales[sales['DocumentDate'].astype(str).str.endswith('2019')]
+    sales = sales[(sales['SalePrice'] > 120000) & (sales['SalePrice'] < 3000000)]
+    combo = sales.merge(residences, on = ['Major','Minor'])
+    combo = combo.merge(parcels, on = ['Major','Minor'])
+    combo = combo[combo['BldgGrade'] > 1]
+    combo = combo[(combo['PresentUse'] == 2)
+                 | (combo['PresentUse'] == 29)
+                 | (combo['PresentUse'] == 300)
+                 | (combo['PresentUse'] == 6)]
+    combo = combo[combo['NbrLivingUnits'] != 10]
+
+    ordinalcols = ['SalePrice','BrickStone','NbrLivingUnits',
+                   'Stories','BldgGrade','SqFt1stFloor','SqFtUpperFloor','SqFtUnfinFull',
+                  'SqFtUnfinHalf','SqFtTotLiving','SqFtTotBasement','SqFtFinBasement','SqFtGarageBasement',
+                  'FinBasementGrade','SqFtGarageAttached','SqFtOpenPorch','SqFtEnclosedPorch',
+                  'SqFtDeck','Bedrooms','BathHalfCount','Bath3qtrCount','BathFullCount','FpSingleStory',
+                  'FpMultiStory','FpFreestanding','FpAdditional','YrBuilt','YrRenovated','Condition',
+                  'AddnlCost','SqFtLot','MtRainier','Olympics','Cascades','Territorial','SeattleSkyline',
+                   'PugetSound','LakeWashington','LakeSammamish','SmallLakeRiverCreek','OtherView',
+                  'WfntFootage','LotDepthFactor','TrafficNoise']
+
+    categorycols = ['SaleReason', 'PropertyClass','HeatSystem','HeatSource','PresentUse','HBUAsIfVacant',
+                   'HBUAsImproved','WaterSystem','SewerSystem','Access','InadequateParking','StreetSurface',
+                   'Topography','WfntLocation','WfntBank','WfntPoorQuality','WfntRestrictedAccess',
+                    'WfntAccessRights','WfntProximityInfluence','TidelandShoreland','PowerLines',
+                    'OtherNuisances','AdjacentGolfFairway','AdjacentGreenbelt'] 
+
+    ordinaltable = combo[ordinalcols]
+    categorytable = combo[categorycols]
+
+    return (ordinaltable, categorytable)
+
 def download_zipfile(URL):
     """
     Given a URL for a .zip, download and unzip the .zip file
